@@ -329,7 +329,7 @@ if __name__ == "__main__":
     # 量子ビットの確保
     q = qp.create_quantum_register("q", size)
     # 出力のための古典ビットを確保 2n bit必要
-    c = qp.create_classical_register("c", size-3)
+    c = qp.create_classical_register("c", size-5)
     circ = qp.create_circuit("circ", [q], [c])
     qp.get_circuit("circ")
     q = list(q)
