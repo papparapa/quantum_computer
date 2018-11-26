@@ -334,8 +334,8 @@ if __name__ == "__main__":
     qp.get_circuit("circ")
     q = list(q)
     ctrl = q[0]
-    qregs = q[1:6]
-    auxes = q[6:12]
+    qregs = q[1:4]
+    auxes = q[4:10]
     # 8を使って15を素因数分解
     # 結果から読み取れるピークの周期で2^(2n)で割った数をmとすると
     # gcd(a^(m/2)+1, N)とgcd(a^(m/2)-1, N)が素因数分解の解
