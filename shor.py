@@ -322,14 +322,14 @@ for method in new_methods:
     setattr(QuantumCircuit, method.__name__, method)
 
 if __name__ == "__main__":
-    # 素因数分解したい数Nに対してN<2^nであるとき素因数分解には2n+5qubit必要
-    # 例えば15を素因数分解するなら15<2^4より13qubit必要
-    size = 13
+    # 素因数分解したい数Nに対してN<2^nであるとき素因数分解には2n+3qubit必要
+    # 例えば15を素因数分解するなら15<2^4より11qubit必要
+    size = 11
     qp = QuantumProgram()
     # 量子ビットの確保
     q = qp.create_quantum_register("q", size)
     # 出力のための古典ビットを確保 2n bit必要
-    c = qp.create_classical_register("c", size-5)
+    c = qp.create_classical_register("c", size-3)
     circ = qp.create_circuit("circ", [q], [c])
     qp.get_circuit("circ")
     q = list(q)
